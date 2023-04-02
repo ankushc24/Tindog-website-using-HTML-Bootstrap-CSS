@@ -1,0 +1,166 @@
+#title{
+    background-color: #ff4c68;
+    color: #fff; /*#fff is white, #000 is black*/
+}
+h1{
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 1.5; /*we don't usually specify any units for height*/
+    font-weight: bolder;
+}
+.container-fluid{ /*Although container-fluid has some of its own styling from bootstrap we can still add our own styling to it*/
+    /*padding: 3% 15%; 3% pading to top and bottom and 15% to left and right*/
+    padding: 3% 15% 7%; /*3% pading to top 15% to left and right and 7% on the bottom*/
+}
+
+.navbar-brand{     /*To style the brand name tindog*/
+    font-family: "Ubuntu";
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.navbar{   /*This acts on the navbar as a whole without affecting any of it's internal components such as navbar-brand*/
+    padding-bottom: 4.5rem;
+}
+
+.navbar-item{  /*We need to add some spacing between the nav-items Contact, Pricing, Download, so we add some padding as shown*/
+    padding: 0 18px; /*0 padding top & bottom and 18px left & right*/
+}
+.nav-link{  /*We need to target the individual nav-links to increase their font-size so we target class nav-link*/
+    font-size: 1.2rem;
+    font-family: "Montserrat-Light";
+}
+.download-button{
+    margin: 5% 3% 5% 0;  
+/*We need to add some margin/spacing between the h1 text and the buttons and spacing between the respective buttons as well*/
+    /*5% margin on top 3% on right 5% on left 0% on bottom*/
+}
+
+.title-image{
+    width: 20%;  /*Now the image takes up 20% of the 6 units assigned to the image*/
+    /*This makes the image look smaller and neat*/
+    transform: rotate(25deg); /* it is a function is css to rotage images */
+    /* every element by default has a z-index of 0 */
+    /*z-index: -1;    the image goes behined every section on our webpage, which we don't want*/
+    /* we only want the image to move behind features section so we move the features above every sections */
+    /* for z-index to work we have to do 1 more thing i.e. set position to absolute */
+    position: absolute;
+    right: 30%; 
+/*since the positioning has already been specified as absolute we can assign the image 30% from the right side */
+}
+
+/* Challenge 1 */
+/* Features section */
+#features{
+    padding: 7% 15%;  /*we have added padding to the features section to make it look neater and make it easier to read */
+    background-color: #fff;
+    position: relative;  
+/*we assign position as relative because we need to mantain the natural css ordering and not put items on 
+top of another as in the absolute positioning*/
+    z-index: 1;
+}
+.feature-box{
+    text-align: center;   /*Aligns the text at the center*/
+    padding: 5%;           
+}
+h3{
+    font-family: "Montserrat";
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+p{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightslategrey;
+    font-weight: bold;
+}
+.icon{
+    color: palevioletred;        /*To add our custom color to the icons we have added in the features section*/
+}
+.icon:hover{     /*changes the color of our icon when we hover our cursor over them */
+    color: red;
+}
+/*Challenge 1 end*/
+
+
+/*Styling the testimonials section using bootstrap*/
+#testimonials{
+    
+    text-align: center;  /*this will align the text as well as the image at the center to make it look more uniform*/
+    background-color: orange;
+    color: #fff;
+}
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+.testimonial_image{
+    width: 10%;
+    border-radius: 100%;  /*this gives rounded edges to the image-100% radius means it will become a full circle*/
+    margin: 20px;
+    
+}
+.carousel_item {
+    padding: 7% 15%; /*7% on top & bottom and 15% left & right*/  
+    /* by adding padding to the carousel item the left & right buttons move a bit wider, and makes it look much clear */
+}
+
+
+/* Styling the press section */
+#press{
+    background-color: orange;
+    text-align: center; /*To align everything at the center including images*/
+    padding-bottom: 3%; /*To lift up the images a little*/
+}
+.press-logo{
+    width: 15%; /*We change the width to make the logo's a liitle smaller*/
+    margin: 20px 20px 50px;/*20px from top, 20 px from left & right, 50px from bottom, this adds spacing between the different logos*/
+}
+
+
+/* Styling the pricing section */
+#pricing{
+    padding: 100px;
+    text-align: center;  /*alligns all the texts in each of the cards center alligned*/
+}
+.pricing-column{
+    padding: 3% 2%; 
+ /* we add padding here to each of these column cards to add spacing between each of these cards and make them look neater */
+}
+
+/* Adding media breakpoint here to change how the title image appears and and the title text aligns on mobile */
+@media (max-width: 1028px){
+    #title{
+        text-align: center;
+    }
+
+    .title-image{
+        
+        position: static;   /*by static positioning the image lines up in natural flow of html*/
+        transform: rotate(0);
+    }
+}
+
+/* Styling the call-to-action section */
+#cta{
+    background-color: red;
+    color: #fff;
+    padding: 7% 15%;  /*using the same amount of padding as in other sections such as fetures or carousel*/
+    text-align: center;
+}
+.cta-heading{
+    font-family: "Ubuntu";
+    font-size: 3.5rem;
+    }
+
+/* Footer section */
+#footer{
+    padding: 7% 15%;
+    text-align: center;
+}
+.social-icon{
+    margin: 20px 10px;  /*20px margin top & bottom and 10px left and right*/
+    /*we add margin to add spacing between the social icons*/
+}
